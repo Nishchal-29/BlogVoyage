@@ -1,8 +1,10 @@
 from flask import Flask, render_template, url_for, redirect, flash
 from forms import RegistrationForm, LoginForm
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '58d3c937cd5a32b6e287826b8e706791d06e5c61'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'defaultsecretkey')
+app.config['SECRET_KEY'] = SECRET_KEY
 
 posts = [
     {
