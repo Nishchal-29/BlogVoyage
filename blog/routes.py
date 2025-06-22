@@ -93,8 +93,11 @@ def account():
     form = UpdateAccountForm()
     if form.validate_on_submit():
         if form.picture.data:
+            prev_picture = current_user.image_file
             picture_file = save_picture(form.picture.data)
             current_user.image_file = picture_file
+            if prev_picture != 'default.jpg':
+                os.remove(os.path.join(app.root_path, 'static/profile_pics', prev_picture))
         if form.username.data != current_user.username:
             current_user.username = form.username.data
         if form.email.data != current_user.email:
