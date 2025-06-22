@@ -14,3 +14,4 @@
 - **Backend:** Python, Flask
 - **Frontend:** HTML, CSS, Bootstrap
 - **Templates:** Jinja2
+- **Database:** SQLite (for simplicity)
