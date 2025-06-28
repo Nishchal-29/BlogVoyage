@@ -32,7 +32,7 @@ def update_post(post_id):
     post = Post.query.get_or_404(post_id)
     if post.author != current_user:
         flash('You are not authorized to update this post.', 'danger')
-        return redirect(url_for('post', post_id=post.id))
+        return redirect(url_for('posts.post', post_id=post.id))
     form = PostForm()
     if form.validate_on_submit():
         post.title = form.title.data
