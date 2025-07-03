@@ -36,3 +36,7 @@ def create_app(config_class=Config):
     app.register_blueprint(errors)
 
     return app
+
+def create_database(app):
+    with app.app_context():
+        db.create_all()
