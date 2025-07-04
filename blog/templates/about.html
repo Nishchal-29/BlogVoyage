@@ -1,4 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1> This is the About Page of the Blog! </h1>
+  <div class="container mt-5">
+    <h1 class="mb-4">About BlogVoyage</h1>
+    <p class="lead">
+      Welcome to <strong>BlogVoyage</strong> — your modern blogging platform designed with flexibility, security, and a smooth user experience in mind.
+    </p>
+    <hr>
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Factory Application Pattern</strong>: Built with a flexible app factory to support multiple configurations and easy scaling.</li>
+      <li><strong>Powerful Models</strong>: Well-structured database models for <em>Posts</em> and <em>Users</em> using SQLAlchemy ORM.</li>
+      <li><strong>Custom Error Handling</strong>: Friendly custom pages for 404 and 500 errors to keep your visitors engaged, even when something goes wrong.</li>
+      <li><strong>Secure Authentication</strong>: User authentication with hashed passwords using Bcrypt, session management with Flask-Login, and email verification for secure password resets.</li>
+      <li><strong>Dynamic Pagination</strong>: Browse posts easily with built-in pagination for an organized reading experience.</li>
+      <li><strong>Interactive Feedback</strong>: Flash messages guide users through actions like logging in, registering, updating accounts, and more.</li>
+      <li><strong>Post Management</strong>: Logged-in users can create, update, and delete their own posts with ease.</li>
+    </ul>
+    <hr>
+  </div>
 {% endblock content %}
