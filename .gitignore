@@ -1,6 +1,4 @@
 .env
 blog/__pycache__/
-instance/
-blog/static/profile_pics/
 add_data.py
 posts.json
