@@ -2,3 +2,9 @@
 blog/__pycache__/
 add_data.py
 posts.json
+client_secret.json
+blog/auth/__pycache__/
+blog/errors/__pycache__/
+blog/main/__pycache__/
+blog/posts/__pycache__/
+blog/users/__pycache__/
