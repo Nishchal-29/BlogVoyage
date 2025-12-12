@@ -1,10 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class = "content-section">
+        <div class="mb-3 text-center">
+            <a href="{{ url_for('auth.google_login') }}" class="btn btn-danger btn-block">
+                <i class="fab fa-google"></i> Login with Google
+            </a>
+        </div>
         <form method = "POST" action = "">
             {{ form.hidden_tag() }}
             <fieldset class = "form-group">
-                <legend class = "border-bottom mb-4">Log In</legend>
+                <legend class = "border-bottom mb-4">Login Via Password</legend>
                 <div class = "form-group">
                     {{ form.email.label(class = "form-control-label") }}
                     {% if form.email.errors %}
@@ -40,14 +45,14 @@
                 {{ form.submit(class = "btn btn-outline-info") }}
             </div>
             <small class = "text-white">
-                <a href = "{{ url_for('users.reset_request') }}">Forgot Password ?</a>
+                <a href = "{{ url_for('auth.reset_request') }}">Forgot Password ?</a>
             </small>
         </form>
     </div>
     <div class="border-top pt-3">
         <small class="text-white">
             Didn't Register ? 
-            <a class="ml-2 text-white text-decoration-underline" href="{{ url_for('users.register') }}">Register</a>
+            <a class="ml-2 text-white text-decoration-underline" href="{{ url_for('auth.register') }}">Register</a>
         </small>
 
     </div>
