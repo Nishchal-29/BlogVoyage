@@ -24,14 +24,14 @@ client_config = {
         "client_secret": os.getenv("GOOGLE_CLIENT_SECRET"),
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token",
-        "redirect_uris": ["http://127.0.0.1:5000/callback", "https://blogvoyage-3.onrender.com/callback"],
+        "redirect_uris": "https://blogvoyage-3.onrender.com/callback"
     }
 }
 
 flow = Flow.from_client_config(
     client_config=client_config,
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
-    redirect_uri=["http://127.0.0.1:5000/callback", "https://blogvoyage-3.onrender.com/callback"]
+    redirect_uri="https://blogvoyage-3.onrender.com/callback"
 )
 
 @auth.route("/google_login")
